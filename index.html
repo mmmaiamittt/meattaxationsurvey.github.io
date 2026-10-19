@@ -144,6 +144,8 @@ select:focus-visible, .choice:focus-within, .btn:focus-visible, .linkbtn:focus-v
   margin-bottom: 22px;
 }
 .vignette p { margin: 0; }
+/* The parts that change between policies (rate, price, use of the money) are bold. */
+.vignette strong { font-weight: 600; }
 .scale { border: 0; margin: 0; padding: 0; min-width: 0; }
 .scale legend { font-weight: 700; font-size: 1.1rem; padding: 0; margin-bottom: 4px; }
 .scale .rowlabel { font-size: 0.85rem; color: var(--muted); margin: 0 0 14px; }
@@ -347,11 +349,11 @@ select:focus-visible, .choice:focus-within, .btn:focus-visible, .linkbtn:focus-v
     'I somewhat support this policy',
     'I strongly support this policy'
   ];
-  var LOWINC = 'All the money collected would be used to help low-income households by giving them extra support to cover food costs.';
-  var CLIMATE = 'All the money collected would go to programs that protect the climate and improve public health, such as reducing emissions and preventing diet-related diseases.';
-  var SPLIT = 'The money collected would be split evenly: half would help low-income households with food costs, and half would fund climate and health programs.';
+  var LOWINC = 'All the money collected would be used to <strong>help low-income households</strong> by giving them extra support to cover food costs.';
+  var CLIMATE = 'All the money collected would go to <strong>programs that protect the climate and improve public health</strong>, such as reducing emissions and preventing diet-related diseases.';
+  var SPLIT = 'The money collected would be <strong>split evenly</strong>: half would help <strong>low-income households</strong> with food costs, and half would fund <strong>climate and health programs</strong>.';
   function stem(rate, price) {
-    return 'A ' + rate + '% tax on meat would begin in your country.<br>A meat product that had cost 10 currency units, will now be sold for ' + price + ' currency units.<br>';
+    return 'A <strong>' + rate + '% tax</strong> on meat would begin in your country.<br>A meat product that had cost 10 currency units, will now be sold for <strong>' + price + ' currency units</strong>.<br>';
   }
   // Display order V1..V6 as in the Qualtrics Survey block.
   var VIGNETTES = [
